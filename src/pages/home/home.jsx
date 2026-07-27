@@ -1,5 +1,5 @@
-import Hero from "../../components/hero/Hero";
-import Story from "../../components/story/Story";
+import Hero from "../../components/hero/hero";
+import Story from "../../components/story/story";
 import Journey from "../../components/journey/Journey";
 import Letter from "../../components/letter/Letter";
 import Proposal from "../../components/proposal/Proposal";
