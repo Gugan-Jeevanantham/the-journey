@@ -1,0 +1,658 @@
+/* ===================================================
+   HERO
+=================================================== */
+
+.hero{
+    position:relative;
+    min-height:100vh;
+    overflow:hidden;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:#070707;
+    isolation:isolate;
+}
+
+/* ===================================================
+   BACKGROUND
+=================================================== */
+
+.hero__gradient{
+    position:absolute;
+    inset:0;
+
+    background:
+    radial-gradient(circle at 20% 20%,rgba(214,164,107,.12),transparent 35%),
+    radial-gradient(circle at 80% 70%,rgba(255,255,255,.05),transparent 40%),
+    linear-gradient(180deg,#090909,#050505);
+
+    animation:gradientMove 14s ease-in-out infinite alternate;
+
+    z-index:-6;
+}
+
+.hero__grid{
+    position:absolute;
+    inset:0;
+
+    background-image:
+        linear-gradient(rgba(255,255,255,.02) 1px,transparent 1px),
+        linear-gradient(90deg,rgba(255,255,255,.02) 1px,transparent 1px);
+
+    background-size:70px 70px;
+
+    mask-image:radial-gradient(circle,black 35%,transparent 90%);
+
+    opacity:.35;
+
+    z-index:-5;
+}
+
+.hero__noise{
+    position:absolute;
+    inset:0;
+
+    opacity:.03;
+
+    background-image:
+    radial-gradient(circle,white .5px,transparent .5px);
+
+    background-size:6px 6px;
+
+    z-index:-4;
+}
+
+/* ===================================================
+   GLOW
+=================================================== */
+
+.hero__glow{
+    position:absolute;
+
+    width:700px;
+    height:700px;
+
+    border-radius:50%;
+
+    filter:blur(120px);
+
+    opacity:.18;
+
+    animation:floatGlow 12s ease-in-out infinite;
+}
+
+.hero__glow--left{
+
+    top:-220px;
+    left:-220px;
+
+    background:#d6a46b;
+}
+
+.hero__glow--right{
+
+    right:-220px;
+    bottom:-220px;
+
+    background:#ffffff22;
+
+    animation-delay:4s;
+}
+
+/* ===================================================
+   CONTAINER
+=================================================== */
+
+.hero__container{
+
+    position:relative;
+
+    z-index:10;
+
+    width:min(1200px,90%);
+
+    margin:auto;
+
+    will-change:transform,opacity;
+
+transform:translateZ(0);
+
+backface-visibility:hidden;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+
+    text-align:center;
+}
+
+/* ===================================================
+   EYEBROW
+=================================================== */
+
+.hero__eyebrow{
+
+    color:#d6a46b;
+
+    font-size:13px;
+
+    letter-spacing:6px;
+
+    text-transform:uppercase;
+
+    margin-bottom:25px;
+}
+
+/* ===================================================
+   TITLE
+=================================================== */
+
+.hero__title{
+
+    display:flex;
+    flex-direction:column;
+
+    gap:8px;
+
+    overflow:hidden;
+
+    font-size: clamp(2.2rem, 5vw, 3.8rem);
+    line-height: 1.15;
+    letter-spacing: -1px;
+
+    color:white;
+
+    font-weight:700;
+    user-select:none;
+
+    text-shadow:
+        0 0 50px rgba(255,255,255,.08);
+}
+
+
+.hero__title span{
+
+overflow:hidden;
+
+}
+
+.hero__line{
+
+    display:block;
+}
+
+/* ===================================================
+   SUBTITLE
+=================================================== */
+
+.hero__subtitle{
+
+    width:min(650px,95%);
+
+    margin-top:42px;
+
+    color:#a8a8a8;
+
+    line-height:2;
+
+    font-size:18px;
+}
+
+/* ===================================================
+   BUTTON
+=================================================== */
+
+.hero__buttonWrapper{
+
+    margin-top:65px;
+}
+
+.hero__button svg{
+
+    transition:.35s;
+}
+
+.hero__button:hover{
+
+    transform:translateY(-6px);
+
+    background:rgba(214,164,107,.12);
+
+    box-shadow:
+    0 20px 50px rgba(214,164,107,.18);
+}
+
+.hero__button:active{
+
+transform:scale(.96);
+
+}
+
+
+
+.hero__button::before{
+
+content:"";
+
+position:absolute;
+
+top:0;
+
+left:-120%;
+
+width:70%;
+
+height:100%;
+
+background:linear-gradient(
+90deg,
+transparent,
+rgba(255,255,255,.45),
+transparent
+);
+
+transform:skewX(-25deg);
+
+transition:left .8s ease;
+    z-index: -1;
+
+
+}
+
+.hero__button:hover{
+
+transform:translateY(-4px);
+
+box-shadow:
+0 20px 50px rgba(214,164,107,.42);
+
+filter:brightness(1.03);
+
+}
+
+.hero__button:hover::before{
+
+left:150%;
+
+}
+
+.hero__button:active{
+
+transform:translateY(-1px);
+
+}
+
+.hero__button svg{
+
+transition:
+transform .35s ease;
+position: relative;
+    z-index: 5;
+
+
+}
+
+.hero__button:hover svg{
+
+transform:
+translateX(4px)
+rotate(-8deg);
+
+}
+
+.hero__button span{
+    position: relative;
+    z-index: 5;
+    color: #ffffff;
+}
+
+.hero__button{
+
+position:relative;
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+gap:14px;
+
+padding:18px 38px;
+
+border:none;
+
+    isolation: isolate;
+    z-index: 1;
+
+border-radius:999px;
+
+background:linear-gradient(
+135deg,
+#d6a46b,
+#f0c98d
+);
+
+color:#111;
+
+font-size:16px;
+
+font-weight:600;
+
+letter-spacing:.5px;
+
+cursor:pointer;
+
+overflow:hidden;
+
+transition:
+transform .35s ease,
+background-color .35s ease,
+box-shadow .35s ease;
+
+box-shadow:
+0 12px 35px rgba(214,164,107,.28);
+
+}
+
+.hero__button:hover::before{
+
+left:120%;
+
+}
+
+.hero__button:hover svg{
+
+    transform:
+    translateX(5px)
+    translateY(-5px);
+}
+
+/* ===================================================
+   SCROLL
+=================================================== */
+
+.hero__scroll{
+
+    position:absolute;
+
+    left:50%;
+    bottom:45px;
+
+    transform:translateX(-50%);
+
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+
+    gap:12px;
+}
+
+.hero__scroll span{
+
+    width:2px;
+    height:70px;
+
+    background:
+    linear-gradient(
+    transparent,
+    #d6a46b,
+    transparent);
+
+    animation:scrollMove 2.5s infinite;
+}
+
+.hero__scroll small{
+
+    color:#8c8c8c;
+
+    letter-spacing:5px;
+
+    font-size:10px;
+}
+
+/* ===================================================
+   ANIMATION
+=================================================== */
+
+@keyframes gradientMove{
+
+    0%{
+
+        transform:scale(1);
+
+    }
+
+    100%{
+
+        transform:scale(1.15);
+    }
+
+}
+
+@keyframes floatGlow{
+
+    0%{
+
+        transform:translate(0,0);
+    }
+
+    50%{
+
+        transform:translate(80px,-50px);
+    }
+
+    100%{
+
+        transform:translate(0,0);
+    }
+
+}
+
+@keyframes scrollMove{
+
+    0%{
+
+        opacity:.2;
+        transform:translateY(0);
+
+    }
+
+    50%{
+
+        opacity:1;
+        transform:translateY(12px);
+
+    }
+
+    100%{
+
+        opacity:.2;
+        transform:translateY(0);
+
+    }
+
+}
+
+/* ===================================================
+   TABLET
+=================================================== */
+
+@media(max-width:992px){
+
+.hero__title{
+
+font-size:6rem;
+
+}
+
+.hero__subtitle{
+
+font-size:16px;
+
+}
+
+}
+
+/* ===================================================
+   MOBILE
+=================================================== */
+
+@media(max-width:768px){
+
+.hero__title{
+
+font-size:3.7rem;
+
+}
+
+.hero__eyebrow{
+
+font-size:11px;
+
+letter-spacing:3px;
+
+}
+
+.hero__subtitle{
+
+font-size:15px;
+
+line-height:1.8;
+
+}
+
+
+.hero__scroll{
+
+display:none;
+
+}
+
+.hero__glow{
+
+width:420px;
+height:420px;
+
+}
+
+}
+
+html{
+
+scroll-behavior:smooth;
+
+}
+
+::selection{
+
+background:#d6a46b;
+
+color:#111;
+
+}
+.hero__gradient{
+
+filter:blur(80px);
+
+will-change:transform;
+
+}
+
+.hero__glow{
+
+will-change:transform;
+
+animation:heroFloat 8s ease-in-out infinite;
+
+}
+
+@keyframes heroFloat{
+
+0%{
+
+transform:translateY(0px);
+
+}
+
+50%{
+
+transform:translateY(-15px);
+
+}
+
+100%{
+
+transform:translateY(0px);
+
+}
+
+}
+
+
+/* ===== Responsive Hero ===== */
+
+@media (max-width:992px){
+
+.hero__title{
+
+font-size:clamp(3rem,11vw,5rem);
+
+}
+
+.hero__subtitle{
+
+max-width:620px;
+
+}
+
+}
+
+@media (max-width:768px){
+
+.hero{
+
+min-height:100svh;
+
+}
+
+.hero__title{
+
+font-size:3rem;
+
+}
+
+.hero__subtitle{
+
+font-size:17px;
+
+line-height:1.8;
+
+}
+
+.hero__button{
+
+width:100%;
+
+max-width:320px;
+
+justify-content:center;
+
+}
+
+}
+
+@media (max-width:480px){
+
+.hero__title{
+
+font-size:2.4rem;
+
+}
+
+.hero__subtitle{
+
+font-size:16px;
+
+}
+
+}

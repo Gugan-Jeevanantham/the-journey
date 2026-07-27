@@ -1,0 +1,75 @@
+.footer{
+
+padding:120px 0 60px;
+
+background:#050505;
+
+text-align:center;
+
+}
+
+.footer__title{
+
+font-size: clamp(2.2rem, 5vw, 3.8rem);
+line-height: 1.15;
+letter-spacing: -1px;
+
+color:#fff;
+
+margin-bottom:25px;
+
+}
+
+.footer__text{
+
+max-width:650px;
+
+margin:auto;
+
+color:#9a9a9a;
+
+line-height:2;
+
+font-size:18px;
+
+}
+
+.footer__line{
+
+width:120px;
+
+height:1px;
+
+margin:60px auto 40px;
+
+background:#d6a46b;
+
+}
+
+.footer__copyright{
+
+color:#666;
+
+letter-spacing:2px;
+
+font-size:14px;
+
+}
+
+@media(max-width:768px){
+
+.footer{
+
+padding:90px 0 40px;
+
+}
+
+.footer__text{
+
+font-size:16px;
+
+line-height:1.8;
+
+}
+
+}

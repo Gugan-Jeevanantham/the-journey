@@ -1,0 +1,127 @@
+:root {
+  /* ===========================
+      COLORS
+  =========================== */
+
+  --color-bg: #080808;
+  --color-bg-secondary: #101010;
+  --color-surface: #141414;
+  --color-card: #1b1b1b;
+
+  --color-white: #ffffff;
+  --color-text: #d7d7d7;
+  --color-text-light: #9b9b9b;
+
+  --color-border: rgba(255,255,255,.08);
+
+  --color-glass: rgba(255,255,255,.04);
+
+  --color-accent: #D6A46B;
+  --color-accent-light: #E8CBA8;
+
+  --color-success: #82d79b;
+  --color-danger: #ff6b7f;
+
+  /* ===========================
+      FONT
+  =========================== */
+
+  --font-heading: "Cormorant Garamond", serif;
+  --font-body: "Poppins", sans-serif;
+  --font-special: "Playfair Display", serif;
+
+  /* ===========================
+      FONT SIZE
+  =========================== */
+
+  --fs-xs: .75rem;
+  --fs-sm: .875rem;
+  --fs-md: 1rem;
+  --fs-lg: 1.125rem;
+  --fs-xl: 1.5rem;
+  --fs-2xl: 2rem;
+  --fs-3xl: 3rem;
+  --fs-4xl: 4rem;
+  --fs-5xl: 5rem;
+
+  /* ===========================
+      FONT WEIGHT
+  =========================== */
+
+  --fw-light:300;
+  --fw-normal:400;
+  --fw-medium:500;
+  --fw-semibold:600;
+  --fw-bold:700;
+
+  /* ===========================
+      SPACING
+  =========================== */
+
+  --space-1:.25rem;
+  --space-2:.5rem;
+  --space-3:.75rem;
+  --space-4:1rem;
+  --space-5:1.5rem;
+  --space-6:2rem;
+  --space-7:3rem;
+  --space-8:4rem;
+  --space-9:5rem;
+  --space-10:6rem;
+
+  /* ===========================
+      RADIUS
+  =========================== */
+
+  --radius-sm:8px;
+  --radius-md:14px;
+  --radius-lg:20px;
+  --radius-xl:30px;
+  --radius-full:999px;
+
+  /* ===========================
+      SHADOW
+  =========================== */
+
+  --shadow-sm:0 5px 15px rgba(0,0,0,.15);
+
+  --shadow-md:0 15px 40px rgba(0,0,0,.25);
+
+  --shadow-lg:0 30px 80px rgba(0,0,0,.35);
+
+  --shadow-glow:0 0 40px rgba(214,164,107,.25);
+
+  /* ===========================
+      CONTAINER
+  =========================== */
+
+  --container:1280px;
+
+  /* ===========================
+      Z INDEX
+  =========================== */
+
+  --z-loader:9999;
+  --z-modal:999;
+  --z-navbar:100;
+  --z-overlay:50;
+  --z-default:1;
+
+  /* ===========================
+      TRANSITION
+  =========================== */
+
+  --transition-fast:.25s ease;
+
+  --transition-normal:.45s ease;
+
+  --transition-slow:.8s ease;
+
+  /* ===========================
+      BLUR
+  =========================== */
+
+  --blur-sm:6px;
+  --blur-md:12px;
+  --blur-lg:24px;
+}
