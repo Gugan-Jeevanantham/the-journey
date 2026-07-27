@@ -1,14 +1,14 @@
-import Hero from "../../components/hero/hero";
-import Story from "../../components/story/story";
-import Journey from "../../components/journey/Journey";
-import Letter from "../../components/letter/Letter";
-import Proposal from "../../components/proposal/Proposal";
-import Question from "../../components/question/Question";
-import Answer from "../../components/answer/Answer";
-import Confession from "../../components/confession/Confession";
-import Finale from "../../components/finale/Finale";
-import Footer from "../../components/footer/Footer";
-import FinalQuestion from "../../components/proposal/FinalQuestion";
+import Hero from "../../components/Hero/Hero";
+import Story from "../../components/Story/Story";
+import Journey from "../../components/Journey/Journey";
+import Letter from "../../components/Letter/Letter";
+import Proposal from "../../components/Proposal/Proposal";
+import Question from "../../components/Question/Question";
+import Answer from "../../components/Answer/Answer";
+import Confession from "../../components/Confession/Confession";
+import Finale from "../../components/Finale/Finale";
+import Footer from "../../components/Footer/Footer";
+import FinalQuestion from "../../components/Proposal/FinalQuestion";
 
 function Home() {
   return (

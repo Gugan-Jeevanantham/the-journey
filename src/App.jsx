@@ -1,8 +1,8 @@
 import { useState } from "react";
-import Loader from "./components/common/Loader/Loader";
+import Loader from "./components/Common/Loader/Loader";
 import Intro from "./components/Intro/Intro";
-import Home from "./pages/home/home";
-import CustomCursor from "./components/common/Cursor/CustomCursor";
+import Home from "./Pages/Home/Home";
+import CustomCursor from "./components/Common/Cursor/CustomCursor";
 
 
 function App() {
