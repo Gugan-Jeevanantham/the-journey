@@ -4,23 +4,23 @@ import { BrowserRouter } from "react-router-dom";
 
 import App from "./App";
 
-import "./styles/base/reset.css";
-import "./styles/base/variables.css";
-import "./styles/base/typography.css";
-import "./styles/base/global.css";
+import "./Styles/Base/reset.css";
+import "./Styles/Base/variables.css";
+import "./Styles/Base/typography.css";
+import "./Styles/Base/global.css";
 
-import "./styles/animations/keyframes.css";
-import "./styles/animations/transitions.css";
+import "./Styles/Animations/keyframes.css";
+import "./Styles/Animations/transitions.css";
 
-import "./styles/components/button.css";
-import "./styles/components/card.css";
-import "./styles/components/cursor.css";
-import "./styles/components/loader.css";
-import "./styles/components/navbar.css";
+import "./Styles/Components/Button.css";
+import "./Styles/Components/Card.css";
+import "./Styles/Components/Cursor.css";
+import "./Styles/Components/Loader.css";
+import "./Styles/Components/Navbar.css";
 
-import "./styles/pages/home.css";
-import "./styles/pages/journey.css";
-import "./styles/pages/proposal.css";
+import "./Styles/Pages/Home.css";
+import "./Styles/Pages/Journey.css";
+import "./Styles/Pages/Proposal.css";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
